@@ -12,7 +12,7 @@ $ npm install ngx-dragdrop
 ```
 
 
-Add the ngx-widget-grid module as a dependency to your application module:
+Add the ngx-dragdrop module as a dependency to your application module:
 
 ```
 import { NgxDragDropModule } from 'ngx-dragdrop';
