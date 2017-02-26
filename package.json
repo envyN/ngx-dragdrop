@@ -1,0 +1,67 @@
+{
+  "name": "ngx-dragdrop",
+  "version": "0.0.1",
+  "description": "Minimal Angular 2.0+ module for HTML5 Drag and Drop",
+  "main": "index.js",
+  "dependencies": {
+    "rxjs": "^5.2.0",
+    "typescript": "^2.2.0",
+    "typings": "^2.1.0",
+    "zone.js": "^0.7.7"
+  },
+  "devDependencies": {
+    "@angular/common": "^2.2.1",
+    "@angular/compiler": "^2.2.1",
+    "@angular/compiler-cli": "^2.2.1",
+    "@angular/core": "^2.2.1",
+    "@angular/platform-browser": "^2.2.1",
+    "@angular/platform-browser-dynamic": "^2.2.1",
+    "@types/chai": "^3.4.33",
+    "@types/core-js": "^0.9.34",
+    "@types/jasmine": "^2.5.36",
+    "@types/sinon": "^1.16.30",
+    "@types/sinon-chai": "^2.7.27",
+    "@types/webpack": "^2.2.4",
+    "core-js": "^2.4.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-inline-ng2-template": "^4.0.0",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-typescript": "^3.1.5",
+    "gulp-util": "^3.0.8",
+    "merge2": "^1.0.3",
+    "run-sequence": "^1.2.2",
+    "rxjs": "^5.0.0",
+    "tslint": "^4.2.0",
+    "typescript": "^2.2.1"
+  },
+  "peerDependencies": {
+    "@angular/common": "^2.2.1",
+    "@angular/core": "^2.2.1"
+  },
+  "scripts": {
+    "prepublish": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/envyN/ngx-dragdrop.git"
+  },
+  "keywords": [
+    "angular",
+    "ng",
+    "angular2",
+    "drag",
+    "drop",
+    "dragdrop"
+  ],
+  "author": "Naveen Adarsh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/envyN/ngx-dragdrop/issues"
+  },
+  "homepage": "https://github.com/envyN/ngx-dragdrop#readme"
+}
