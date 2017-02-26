@@ -105,6 +105,7 @@ This expects an array of strings
 The object that is passed to the dropHandler defined as the value for (ngx-droppable) has the following keys:
  ``dragTag, dragData, dropData``
  >Since the directives use HTML dataTransfer Object, the `ngx-dragData` is a copy(deserialized event dataTransfer object) of the original object, it is recommended that only uniquely identifying data for the dragged nodes be passed into `ngx-dragData` and the original object if needed, be retrieved using this information.
+
 ## Build
 Check out `/src` for the original source code.
 
