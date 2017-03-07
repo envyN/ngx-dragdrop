@@ -43,14 +43,6 @@ export class NgxDraggableDirective {
         }
     }
 
-    @HostListener('drag', ['$event'])
-    onDrag(event) {
-        if (this.el.nativeElement === event.target) {
-            event.target.classList.add(this.draggedClass);
-            event.dataTransfer.setData('data', JSON.stringify({dd: this.dragData}));
-        }
-    }
-
     @HostListener('dragend', ['$event'])
     onDragEnd(event) {
         if (this.el.nativeElement === event.target) {
