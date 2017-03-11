@@ -1,5 +1,5 @@
 /* Copyright VMware, Inc. All rights reserved. VMware Confidential */
-import {NgModule} from "@angular/core";
+import {NgModule, ModuleWithProviders} from "@angular/core";
 import {NgxDraggableDirective} from "./draggable.directive";
 import {NgxDroppableDirective} from "./droppable.directive";
 import {NgxDragDropService} from "./dragDrop.service";
@@ -11,5 +11,17 @@ import {NgxDragDropService} from "./dragDrop.service";
   exports: [NgxDraggableDirective, NgxDroppableDirective]
 })
 export class NgxDragDropModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: NgxDragDropModule,
+      providers: []
+    };
+  }
 
+  static forChild(): ModuleWithProviders {
+    return {
+      ngModule: NgxDragDropModule,
+      providers: []
+    };
+  }
 }
