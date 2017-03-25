@@ -5,7 +5,7 @@ import {NgxDragDropService} from "./dragDrop.service";
     selector: '[ngx-draggable]'
 })
 export class NgxDraggableDirective {
-    private _isDraggable: boolean = false;
+    public _isDraggable: boolean = false;
 
     constructor(private el: ElementRef, private dragDropService: NgxDragDropService) {
     }
@@ -21,13 +21,13 @@ export class NgxDraggableDirective {
     }
 
     @Input('ngx-dragTag')
-    private dragTag: string;
+    public dragTag: string;
 
     @Input('ngx-draggedClass')
-    private draggedClass: string;
+    public draggedClass: string;
 
     @Input('ngx-dragData')
-    private dragData: any;
+    public dragData: any;
 
     @HostListener('dragstart', ['$event'])
     onDragStart(event) {

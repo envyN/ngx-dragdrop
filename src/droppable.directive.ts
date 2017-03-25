@@ -10,13 +10,13 @@ export class NgxDroppableDirective {
     }
 
     @Output('ngx-droppable')
-    private onDropData: EventEmitter<any> = new EventEmitter();
+    public onDropData: EventEmitter<any> = new EventEmitter();
 
     @Input('ngx-dropTags')
-    private dropTags: string[] = [this.dragDropService.instanceName];
+    public dropTags: string[] = [this.dragDropService.instanceName];
 
     @Input('ngx-dropData')
-    private dropData: any;
+    public dropData: any;
 
     @HostListener('dragenter', ['$event'])
     onDragEnter(event) {

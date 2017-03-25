@@ -2,8 +2,8 @@
 import {Injectable} from "@angular/core";
 @Injectable()
 export class NgxDragDropService {
-    private name: string;
-    private defaultInstanceName: string = 'ngx-dragdrop';
+    public name: string;
+    public defaultInstanceName: string = 'ngx-dragdrop';
 
     get instanceName() {
         return this.name;
