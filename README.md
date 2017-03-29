@@ -109,5 +109,5 @@ The object that is passed to the dropHandler defined as the value for (ngx-dropp
 ## Build
 Check out `/src` for the original source code.
 
-##License
+## License
 MIT
