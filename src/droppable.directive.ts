@@ -1,6 +1,7 @@
 /* Copyright VMware, Inc. All rights reserved. VMware Confidential */
 import {Directive, Renderer, ElementRef, Input, HostListener, Output, EventEmitter} from "@angular/core";
 import {NgxDragDropService} from "./dragDrop.service";
+
 @Directive({
     selector: '[ngx-droppable]'
 })
@@ -79,10 +80,18 @@ export class NgxDroppableDirective {
         if (this.el.nativeElement === event.target) {
             let dragTag = this.dragDropService.instanceName;
             let data = event.dataTransfer.getData('data');
-            let dragData = JSON.parse(data).dd;
-            if (this.dropTags.indexOf(this.dragDropService.instanceName) !== -1) {
-                event.target.classList.remove(this.dragDropService.instanceName);
-                this.onDropData.emit({dragTag, dragData: dragData, dropData: this.dropData})
+            let dragData;
+            try {
+                dragData = JSON.parse(data).dd;
+                if (this.dropTags.indexOf(this.dragDropService.instanceName) !== -1) {
+                    event.target.classList.remove(this.dragDropService.instanceName);
+                    this.onDropData.emit({dragTag, dragData: dragData, dropData: this.dropData})
+                }
+            } catch (e) {
+                if (console && typeof console.log === 'function') {
+                    console.log(e);
+                    console.log('Drop failed! Data: ', data);
+                }
             }
         }
     }

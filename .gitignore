@@ -14,3 +14,4 @@ src/**/*.js
 *.d.ts
 /dist
 *.metadata.json
+yarn-error.log
