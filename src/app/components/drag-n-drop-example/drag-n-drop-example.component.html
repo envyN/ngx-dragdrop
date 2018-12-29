@@ -1,0 +1,54 @@
+<h1>
+  Drag and Drop
+</h1>
+<section class="p2">
+  <p>To make an element droppable, use the <b>ngxDroppable</b> directive</p>
+  <p><b>(ngxDroppable)</b> is a drop handler and hence you can use it to call the onDrop functionality as needed</p>
+
+  <pre><code>&lt;span [ngxDraggable]=&quot;true&quot;&gt;Drag me!&lt;/span&gt;<br/>&lt;div (ngxDroppable)=&quot;onDrop($event)&quot;&gt;Drop here&lt;/div&gt;</code></pre>
+  <pre><code [innerHTML]="drop1Code"></code></pre>
+  <span [ngxDraggable]="true">Drag me!</span>
+  <div class="drop-container"
+       [class.dropdone]="drop1Done"
+       (ngxDroppable)="onDrop1($event)">{{ drop1Done? 'Dropped!!!' : 'Drop here' }}
+  </div>
+  <hr>
+  <p>Bind to the <b>[ngxDragData]</b> directive to a variable to attach data to the dragged element</p>
+  <pre><code>&lt;span [ngxDraggable]=&quot;true&quot;<br/>        [ngxDragData]=&quot;{{'{name:"Foo"}'}}&quot;&gt;Drag Foo&lt;/span&gt;<br/>&lt;span [ngxDraggable]=&quot;true&quot;<br/>        [ngxDragData]=&quot;{{'{name:"Bar"}'}}&quot;&gt;Drag Bar&lt;/span&gt;<br/>&lt;div (ngxDroppable)=&quot;onDrop($event)&quot;&gt;Dropped {{'\{\{ dropVal \}\}'}}&lt;/div&gt;</code></pre>
+
+  <pre><code [innerHTML]="drop2Code"></code></pre>
+  <span [ngxDraggable]="true"
+        [ngxDragData]="{name:'Foo'}">Drag Foo</span>&nbsp;&nbsp;
+  <span [ngxDraggable]="true"
+        [ngxDragData]="{name:'Bar'}">Drag Bar</span>
+  <div class="drop-container"
+       [class.dropdone]="drop2Done"
+       (ngxDroppable)="onDrop2($event)">{{ drop2Done? 'Dropped '+ drop2Val + ' !!!' : 'Drop here' }}
+  </div>
+  <hr>
+  <p>Bind to the <b>[ngxDropData]</b> directive to a variable to attach data to the droppable element</p>
+  <pre><code>&lt;span [ngxDraggable]=&quot;true&quot;<br/>        [ngxDragData]=&quot;{{'{name:"Foo"}'}}&quot;&gt;Drag Foo&lt;/span&gt;<br/>&lt;span [ngxDraggable]=&quot;true&quot;<br/>        [ngxDragData]=&quot;{{'{name:"Bar"}'}}&quot;&gt;Drag Bar&lt;/span&gt;<br/>&lt;div (ngxDroppable)=&quot;onDrop($event)&quot; [ngxDropData]=&quot;{{'{name:"drop1"}'}}&quot;&gt;Dropped {{'\{\{ dropVal \}\}'}}&lt;/div&gt;<br/>&lt;div (ngxDroppable)=&quot;onDrop($event)&quot; [ngxDropData]=&quot;{{'{name:"drop2"}'}}&quot;&gt;Dropped {{'\{\{ dropVal \}\}'}}&lt;/div&gt;</code></pre>
+
+  <pre><code [innerHTML]="drop3Code"></code></pre>
+  <span [ngxDraggable]="true"
+        [ngxDragData]="{name:'Foo'}">Drag Foo</span>&nbsp;&nbsp;
+  <span [ngxDraggable]="true"
+        [ngxDragData]="{name:'Bar'}">Drag Bar</span>
+  <div class="drop-container-wrapper">
+    <div class="drop-container"
+         [class.dropdone]="drop31Done"
+         [ngxDropData]="{name:'drop1'}"
+         (ngxDroppable)="onDrop3($event)">{{ drop31Done? 'Dropped '+ drop31Val + ' !!!' : 'Drop 1' }}
+    </div>
+    <div class="drop-container"
+         [class.dropdone]="drop32Done"
+         [ngxDropData]="{name:'drop2'}"
+         (ngxDroppable)="onDrop3($event)">{{ drop32Done? 'Dropped '+ drop32Val + ' !!!' : 'Drop 2' }}
+    </div>
+  </div>
+  <div class="actions-wrapper">
+    <div class="action"
+         *ngFor="let action of drop3Actions">{{action}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  .characters-container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+    margin: 2rem 1rem 2rem 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    &.got, &.friends {
+      border-style: dashed;
+      border-color: blue;
+      * {
+        pointer-events: none;
+      }
+    }
+  }
+  .character {
+    padding: 10px;
+  }
+}
+
+.dragged {
+  opacity: 0.2;
+  color: red;
+}

@@ -1,0 +1,34 @@
+<h1>
+  Basic Drag
+</h1>
+<section class="p2">
+  <p>To make an element draggable, use the <b>[ngxDraggable]</b> directive</p>
+
+  <pre><code>&lt;span [ngxDraggable]=&quot;true&quot;&gt;Drag me!&lt;/span&gt;</code></pre>
+  <span [ngxDraggable]="true">Drag me!</span> or this image : <img [ngxDraggable]="true"
+                                                                   alt="Angular Logo"
+                                                                   height="24px"
+                                                                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+
+  <hr>
+  <p>Bind to the <b>[ngxDraggable]</b> directive to a variable to toggle draggability of the element</p>
+  <pre><code>&lt;span [ngxDraggable]=&quot;isDraggable&quot;&gt;Drag me!&lt;/span&gt;</code></pre>
+  <pre><code [innerHTML]="drag1Code"></code></pre>
+  <div class="form">
+    <div class="form-group">
+      <label [ngxDraggable]="drag1">Drag me!</label>
+      <div class="checkbox">
+        <input type="checkbox"
+               id="checkrads_1"
+               [(ngModel)]="drag1">
+        <label for="checkrads_1">Drag {{ drag1?'enabled' : 'disabled' }}</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p>Use <b>[ngxDraggedClass]</b> to attach css classes while drag is in progress</p>
+  <pre><code>&lt;span [ngxDraggable]=&quot;true&quot;<br/>      [ngxDraggedClass]=&quot;'draggable'&quot;&gt;Drag me!&lt;/span&gt;</code></pre>
+  <pre><code [innerHTML]="drag2StyleCode"></code></pre>
+  <span [ngxDraggable]="true"
+        [ngxDraggedClass]="'draggable'">Drag me!</span>
+</section>
