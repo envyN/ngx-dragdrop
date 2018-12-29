@@ -2,7 +2,7 @@
 
 A minimal angular 2.0+ module library for Drag and Drop using native HTML5 Drag and Drop.
 
-#### Demo: todo
+#### Demo: https://envyn.github.io/ngx-dragdrop/
 
 ## Installation
 Install with [npm](http://www.npmjs.com/):
