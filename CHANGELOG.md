@@ -1,6 +1,6 @@
 # Change Log
 
-## 6.0.0-beta.1
+## 6.0.0
 ### Features
 * Updated Angular to 6.0.0
 * Added `IOnDropData` interface for OnDrop $event type
