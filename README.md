@@ -113,6 +113,7 @@ The object that is passed to the dropHandler defined as the value for (ngxDroppa
 * Fork the repo
 * get your local git clone of the repo fork using `git clone ...`
 * Run `yarn install --pure-lockfile`
+* Run `yarn build-lib:w` to build the library locally and watch for changes
 * Run `yarn start` (You should have your local app running at http://localhost:4200)
 * Make fixes/changes
 * Commit and push to fork

@@ -1,5 +1,5 @@
 /* Copyright VMware, Inc. All rights reserved. VMware Confidential */
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/core';
 import { NgxDragDropService } from './dragDrop.service';
 
 @Directive({
@@ -8,13 +8,13 @@ import { NgxDragDropService } from './dragDrop.service';
 export class NgxDraggableDirective {
   public _isDraggable = false;
 
-  constructor(private el: ElementRef, private dragDropService: NgxDragDropService) {
+  constructor(private el: ElementRef, private dragDropService: NgxDragDropService, private _renderer: Renderer2) {
   }
 
   @Input()
   set ngxDraggable(dragEnabled) {
     const draggable = !!dragEnabled;
-    this.el.nativeElement.setAttribute('draggable', draggable);
+    this._renderer.setAttribute(this.el.nativeElement, 'draggable', `${ draggable }`);
     this._isDraggable = draggable;
   }
 

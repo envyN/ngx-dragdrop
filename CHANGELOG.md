@@ -1,5 +1,9 @@
 # Change Log
 
+## 8.0.0
+### Features
+* Updated Angular to 8
+
 ## 6.0.0
 ### Features
 * Updated Angular to 6.0.0
