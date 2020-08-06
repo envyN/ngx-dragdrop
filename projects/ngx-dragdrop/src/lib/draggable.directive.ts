@@ -14,6 +14,7 @@ export class NgxDraggableDirective {
   @Input()
   set ngxDraggable(dragEnabled) {
     const draggable = !!dragEnabled;
+    console.log(this.el);
     this._renderer.setAttribute(this.el.nativeElement, 'draggable', `${ draggable }`);
     this._isDraggable = draggable;
   }

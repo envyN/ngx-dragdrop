@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DragNDropExampleComponent } from './components/drag-n-drop-example/drag-n-drop-example.component';
 import { GroupedDragDropExampleComponent } from './components/grouped-drag-drop-example/grouped-drag-drop-example.component';
+import { AngularComponentComponent } from './components/angular-component/angular-component.component';
+import { TestComponent } from './components/angular-component/test/test.component';
 
 @NgModule({
             declarations: [
@@ -19,7 +21,9 @@ import { GroupedDragDropExampleComponent } from './components/grouped-drag-drop-
               BasicExampleComponent,
               IntroductionComponent,
               DragNDropExampleComponent,
-              GroupedDragDropExampleComponent
+              GroupedDragDropExampleComponent,
+              AngularComponentComponent,
+              TestComponent
             ],
             imports: [
               AppModuleRouting,

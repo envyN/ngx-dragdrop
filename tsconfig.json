@@ -20,10 +20,7 @@
     ],
     "paths": {
       "ngx-dragdrop": [
-        "dist/ngx-dragdrop"
-      ],
-      "ngx-dragdrop/*": [
-        "dist/ngx-dragdrop/*"
+        "projects/ngx-dragdrop/src/public_api"
       ]
     }
   }

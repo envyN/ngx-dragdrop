@@ -1,0 +1,16 @@
+<h1>
+  Angular component Drag
+</h1>
+<section class="p2">
+  <p>To make an angular component draggable, use the <b>[ngxDraggable]</b> directive</p>
+
+  <pre><code>&lt;my-cmp [ngxDraggable]=&quot;true&quot;&gt;Drag me!&lt;/my-cmp&gt;</code></pre>
+  <app-test [ngxDraggable]="true">Drag me!</app-test>
+  <hr>
+  <p>Use <b>[ngxDraggedClass]</b> to attach css classes while drag is in progress</p>
+  <pre><code>&lt;my-cmp [ngxDraggable]=&quot;true&quot;<br/>      [ngxDraggedClass]=&quot;'draggable'&quot;&gt;Drag me!&lt;/my-cmp&gt;</code></pre>
+  <pre><code [innerHTML]="drag2StyleCode"></code></pre>
+  <app-test [ngxDraggable]="true"
+            [ngxDraggedClass]="'draggable'">Drag me!
+  </app-test>
+</section>

@@ -4,6 +4,7 @@ import { BasicExampleComponent } from './components/basic-example/basic-example.
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { DragNDropExampleComponent } from './components/drag-n-drop-example/drag-n-drop-example.component';
 import { GroupedDragDropExampleComponent } from './components/grouped-drag-drop-example/grouped-drag-drop-example.component';
+import { AngularComponentComponent } from './components/angular-component/angular-component.component';
 
 export const routes: Routes = [
   {
@@ -26,6 +27,10 @@ export const routes: Routes = [
   {
     path: 'groupeddragdrop',
     component: GroupedDragDropExampleComponent
+  },
+  {
+    path: 'angularcomponent',
+    component: AngularComponentComponent
   },
   {
     path: '**',
