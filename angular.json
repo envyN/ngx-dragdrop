@@ -136,10 +136,15 @@
       "prefix": "ngx",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-dragdrop/tsconfig.lib.json",
             "project": "projects/ngx-dragdrop/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-dragdrop/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {

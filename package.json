@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-lib": "ng build ngx-dragdrop",
+    "build-lib": "ng build ngx-dragdrop --configuration production",
     "build-lib:w": "ng build ngx-dragdrop --watch",
     "npm-pack": "cd dist/ngx-dragdrop && npm pack",
     "package": "npm run build-lib && npm run npm-pack",
